@@ -17,6 +17,7 @@ chmod a+x certbot-auto
 service zimbra stop
 ./certbot-auto renew
 
+mkdir -p /opt/zimbra/ssl/letsencrypt/
 cp -f /etc/letsencrypt/live/$domain/* /opt/zimbra/ssl/letsencrypt/
 chown zimbra:zimbra /opt/zimbra/ssl/letsencrypt/*
 cd /opt/zimbra/ssl/letsencrypt/
